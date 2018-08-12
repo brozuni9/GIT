@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FD1EA646-5421-469C-ADF2-6CA5BD7F51B8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HLP.GeraXml.dao</RootNamespace>
+    <AssemblyName>HLP.GeraXml.dao</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalDecisions.CrystalReports.Engine.1.0.0\lib\CrystalDecisions.CrystalReports.Engine.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalDecisions.ReportSource.1.0.0\lib\CrystalDecisions.ReportSource.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalDecisions.Shared.1.0.0\lib\CrystalDecisions.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalDecisions.Windows.Forms.1.0.0\lib\CrystalDecisions.Windows.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="FirebirdSql.Data.FirebirdClient">
+      <HintPath>..\bin\FirebirdSql.Data.FirebirdClient.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks, Version=1.0.12.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.Async.1.0.168\lib\net40\Microsoft.Threading.Tasks.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks.Extensions, Version=1.0.12.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.Async.1.0.168\lib\net40\Microsoft.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks.Extensions.Desktop, Version=1.0.168.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.Async.1.0.168\lib\net40\Microsoft.Threading.Tasks.Extensions.Desktop.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.IO, Version=2.6.10.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.1.1.10\lib\net40\System.IO.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net" />
+    <Reference Include="System.Runtime, Version=2.6.10.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.1.1.10\lib\net40\System.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks, Version=2.6.10.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.1.1.10\lib\net40\System.Threading.Tasks.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ADO\HlpDbFuncoes.cs" />
+    <Compile Include="ADO\HlpDbFuncoesGeral.cs" />
+    <Compile Include="CCe\daoCarregaDataSet.cs" />
+    <Compile Include="CCe\daoGeraCCe.cs" />
+    <Compile Include="CCe\daoPesquisaCCe.cs" />
+    <Compile Include="CTe\daoBuscaDadosGerais.cs" />
+    <Compile Include="CTe\daoCancelaCte.cs" />
+    <Compile Include="CTe\daoDadosDest.cs" />
+    <Compile Include="CTe\daoDadosEmit.cs" />
+    <Compile Include="CTe\daoDadosExped.cs" />
+    <Compile Include="CTe\daoDadosImp.cs" />
+    <Compile Include="CTe\daoDadosinfCarga.cs" />
+    <Compile Include="CTe\daoDadosinfQ.cs" />
+    <Compile Include="CTe\daoDadosNf.cs" />
+    <Compile Include="CTe\daoDadosReceb.cs" />
+    <Compile Include="CTe\daoDadosRem.cs" />
+    <Compile Include="CTe\daoDadosrodo.cs" />
+    <Compile Include="CTe\daoDadosVPrest.cs" />
+    <Compile Include="CTe\daoGeraNumero.cs" />
+    <Compile Include="CTe\MDFe\daoRecepcaoMDFE.cs" />
+    <Compile Include="CTe\MDFe\daoNumeroManifesto.cs" />
+    <Compile Include="CTe\MDFe\daoPesquisaManifesto.cs" />
+    <Compile Include="daoGenerator.cs" />
+    <Compile Include="CTe\daoGravaDadosRetorno.cs" />
+    <Compile Include="CTe\daoDadosIde.cs" />
+    <Compile Include="CTe\daoPopulaCte.cs" />
+    <Compile Include="CTe\daoInutilizaFaixaCte.cs" />
+    <Compile Include="CTe\daoNumeroCte.cs" />
+    <Compile Include="daoEmail.cs" />
+    <Compile Include="daoEmailContador.cs" />
+    <Compile Include="daoConfiguracao.cs" />
+    <Compile Include="daoEnvio.cs" />
+    <Compile Include="daoUtil.cs" />
+    <Compile Include="NFes\daoBuscaDados.cs" />
+    <Compile Include="NFes\daoCancelamentoNFse.cs" />
+    <Compile Include="NFes\daoConstrucaoCivil.cs" />
+    <Compile Include="NFes\daoImpressao.cs" />
+    <Compile Include="NFes\daoLoteRps.cs" />
+    <Compile Include="NFes\daoPrestador.cs" />
+    <Compile Include="NFes\daoRecepcao.cs" />
+    <Compile Include="NFes\daoServico.cs" />
+    <Compile Include="NFes\daotcIdentificacaoRps.cs" />
+    <Compile Include="NFes\daoTomador.cs" />
+    <Compile Include="NFes\DSF\daoCancelamentoDSF.cs" />
+    <Compile Include="NFes\DSF\daoEnviarNFSeWS.cs" />
+    <Compile Include="NFes\DSF\daoRPS.cs" />
+    <Compile Include="NFes\Susesu\daoNFesSusesu.cs" />
+    <Compile Include="NFe\daoBusRetFazenda.cs" />
+    <Compile Include="NFe\daoCancelamento.cs" />
+    <Compile Include="NFe\daoConsultaStatusCliente.cs" />
+    <Compile Include="NFe\daoDuplicata.cs" />
+    <Compile Include="NFe\daoInutilizacao.cs" />
+    <Compile Include="NFe\daoLorenzon.cs" />
+    <Compile Include="NFe\daoNumeroNF.cs" />
+    <Compile Include="NFe\daoPesquisaNFeRef.cs" />
+    <Compile Include="NFe\daoPesquisaNotas.cs" />
+    <Compile Include="NFe\daoRecepcao.cs" />
+    <Compile Include="NFe\daoRegras.cs" />
+    <Compile Include="NFe\Especifico\daoEspecifico.cs" />
+    <Compile Include="NFe\Estrutura\daoCobr.cs" />
+    <Compile Include="NFe\Estrutura\daoDest.cs" />
+    <Compile Include="NFe\Estrutura\daoDet.cs" />
+    <Compile Include="NFe\Estrutura\daoDI.cs" />
+    <Compile Include="NFe\Estrutura\daoEmit.cs" />
+    <Compile Include="NFe\Estrutura\daoEndEnt.cs" />
+    <Compile Include="NFe\Estrutura\daoInfAdic.cs" />
+    <Compile Include="NFe\Estrutura\daoTransp.cs" />
+    <Compile Include="NFe\Estrutura\daoIde.cs" />
+    <Compile Include="NFe\Estrutura\daoTotal.cs" />
+    <Compile Include="NFe\Manifestacao\daoManifestacaoPesquisa.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HLP.GeraXml.Comum\HLP.GeraXml.Comum.csproj">
+      <Project>{EC6A843B-7B8D-4E7E-B63A-8DA001B39EF5}</Project>
+      <Name>HLP.GeraXml.Comum</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este projeto faz referência a pacotes do NuGet que não estão presentes neste computador. Use a Restauração de Pacotes do NuGet para baixá-los.  Para obter mais informações, consulte http://go.microsoft.com/fwlink/?LinkID=322105. O arquivo ausente é {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
